@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function flipCoinLogic(userChoice) {
+                let ranNum = Math.random();
+
+                let message = 'tails';
+
+                let guess;
+
+                if (ranNum <= 0.5) {
+                    message = 'head';
+                }
+
+                let result = message;
+
+                let wOrL = 'wrong';
+
+                if(result === userChoice){
+                    wOrL = 'right'
+                }
+
+                return console.log(`Its ${ranNum} so its ${message}, you guess it ${wOrL}!`);
+            }
+
+            //Q6j
+            function flipCoinLogic2(userChoice){
+
+                const ranNum = Math.random();
+
+                const result = ranNum <= 0.5 ? 'head' : 'tails';
+
+                const compare = result === userChoice ? 'right' : 'wrong';
+
+                return console.log(`Its ${result}(${ranNum}), you guess it ${compare}!`)
+            }
+        </script>
+
+    <button onclick="flipCoinLogic2('head')">Head</button>
+    <button onclick="flipCoinLogic2('tails')">Tails</button>
+    
+</body>
+</html>

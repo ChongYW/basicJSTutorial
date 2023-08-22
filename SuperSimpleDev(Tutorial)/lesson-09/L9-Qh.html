@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" onkeyup="
+        liveInput(event);    
+    ">
+    <p class="js-p"></p>
+
+    <script>
+        let aBunchOfWord = '';
+
+        function liveInput(event){
+
+            let mirrorWord = event.key === 'Backspace' ? aBunchOfWord.slice(0, -1) : aBunchOfWord += event.key;
+
+            aBunchOfWord = mirrorWord;
+            
+            document.querySelector('.js-p').innerHTML = `${mirrorWord}`;
+        }
+    </script>
+</body>
+</html>

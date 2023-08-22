@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="js-heads-btn" onclick="
+        flipCoinLogic('heads');
+    ">heads</button>
+
+    <button class="js-tails-btn" onclick="
+        flipCoinLogic('tails');
+    ">tails</button>
+
+    <p class="js-p"></p>
+    <script>
+
+        function flipCoinLogic(userChose){
+            document.querySelector('.js-p').innerHTML = `You chose: ${userChose}`;
+        }
+        
+    </script>
+</body>
+</html>
